@@ -1,0 +1,115 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    background-color: #1C1B22;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+    font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+button {
+    all: unset;
+    /* Resets all inherited and browser-specific styles */
+    display: inline-block;
+    /* Ensures buttons behave like buttons */
+    cursor: pointer;
+    /* Ensures pointer cursor on hover */
+}
+
+input {
+    outline: none;
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+:root {
+    --primary-color: #48fab9;
+    --bg-color: #1b1a21;
+    --secondary-bg-color: #252529;
+    --font-size-large: 18px;
+    --spacing: 16px;
+
+}
+
+
+@media (min-width: 1024px) {
+    body {
+        width: 60%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 1100px) {
+    body {
+        width: 95%;
+        margin: auto;
+    }
+}

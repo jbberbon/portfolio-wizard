@@ -1,0 +1,160 @@
+nav {
+    padding-bottom: 1rem;
+    /* background-color: white; */
+    /* box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); */
+    /* position: sticky */
+}
+
+nav div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 9999;
+    background-color: var(--bg-color);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 2.5rem 1rem;
+
+    transition: background-color 0.3s ease-in
+}
+
+nav a:first-child {
+    padding-left: 0;
+    margin-right: auto;
+}
+
+.sidebar:first-child {
+    margin-right: auto;
+}
+
+nav a:nth-last-child(2) {
+    color: var(--bg-color);
+
+    border-radius: 50px;
+    padding: 4px 12px 4px 12px;
+    white-space: nowrap;
+    background-color: var(--primary-color);
+
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+nav a:hover {
+    color: var(--primary-color);
+}
+
+nav a:last-child {
+    padding-right: 0;
+}
+
+nav a:nth-last-child(2):hover {
+    color: white
+}
+
+/* Logo */
+nav a:first-of-type {
+    font-family: "Roboto Mono", serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: white;
+}
+
+nav a:first-of-type:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.logo::after {
+    content: '.';
+    color: #48fab9;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+#hamburger path {
+    fill: white;
+}
+
+#hamburger:hover path {
+    fill: var(--primary-color);
+}
+
+#close {
+    padding-right: 1rem;
+}
+
+#close svg {
+    margin-left: auto;
+}
+
+#close path {
+    fill: white;
+}
+
+#close:hover path {
+    fill: var(--primary-color);
+}
+
+/* For mobile */
+@media (max-width: 850px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .sidebar a:hover {
+        background-color: #2a2933;
+    }
+
+    nav a {
+        color: white !important;
+        border-radius: 0 !important;
+        transition: none !important;
+    }
+
+    nav a:not(:first-child) {
+        padding: 1.5rem 1rem !important;
+    }
+
+    nav a:nth-last-of-type(2) {
+        background-color: transparent;
+    }
+}
+
+@media (min-width: 450px) {
+    .sidebar {
+        width: 300px;
+    }
+
+    nav a {
+        justify-content: flex-start;
+    }
+}
+
+/* For tablet */
+@media (min-width: 850px) {
+    .hideOnTablet {
+        display: none;
+    }
+}

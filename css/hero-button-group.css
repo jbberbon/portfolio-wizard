@@ -1,0 +1,105 @@
+/* Download CV Btn */
+.hero-button-grp {
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    gap: 1rem !important;
+}
+
+.hero-section button {
+    /* height: 2rem; */
+    padding: 4px 12px 4px 12px;
+    background-color: transparent;
+    border-radius: 50px;
+    border: 2px solid var(--primary-color);
+
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 0.3s ease, color 0.3s ease, fill 0.3s ease, stroke 0.3s ease;
+}
+
+/* SVG Styling */
+.download-cv-btn svg {
+    width: auto;
+    height: 1.2rem;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.github-btn svg,
+.linkedin-btn svg {
+    width: auto;
+    height: 1.5rem;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.linkedin-btn svg {
+    scale: 95%;
+
+}
+
+/* Download CV Btn */
+.hero-section button p {
+    color: var(--primary-color);
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.download-cv-btn svg path {
+    stroke: var(--primary-color);
+    stroke-width: 2;
+    transition: fill 0.3s ease;
+}
+
+.download-cv-btn:hover svg path {
+    stroke: white;
+}
+
+/* Github */
+.github-btn svg path {
+    fill: var(--primary-color);
+    transition: fill 0.3s ease;
+}
+
+.github-btn:hover svg path {
+    fill: white;
+}
+
+/* Linkedin */
+.linkedin-btn svg path {
+    fill: var(--primary-color);
+    transition: fill 0.3s ease;
+}
+
+.linkedin-btn:hover svg path {
+    fill: white;
+}
+
+/* General Hover effects */
+.hero-button-grp button:hover {
+    background-color: var(--primary-color);
+}
+
+.hero-section button:hover p {
+    color: white;
+}
+
+
+
+
+.github-linkedin-btn {
+    display: flex;
+    flex-direction: row !important;
+    gap: 1rem;
+}
+
+@media (min-width: 700px) {
+    .hero-button-grp {
+        flex-direction: row !important;
+    }
+    .github-linkedin-btn {
+        align-items: center !important;
+    }
+}
