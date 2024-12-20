@@ -16,6 +16,7 @@
     gap: 2rem;
 
     padding: 1rem;
+    padding-left: 0;
 
 }
 
@@ -69,6 +70,7 @@
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    padding-right: 0;
 }
 
 /* Hide what needs to be hidden */
@@ -102,14 +104,10 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-
     gap: 1rem;
-
     border-radius: 8px;
-
-
     /* make it scroll */
-    max-height: 400px;
+    max-height: 500px;
     overflow-y: auto;
 }
 
@@ -158,27 +156,43 @@
 
 /* Skills card */
 .skills-card {
+    width: 100%;
+    /* max-height: 300px;
+    overflow-y: auto; */
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 1rem;
+    padding-bottom: 1rem;
 }
 
 .skills-card div {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    width: 100px;
-    height: 100px;
     background-color: var(--secondary-bg-color);
     border-radius: 8px;
-    /* padding: 1rem; */
+    padding: 1rem;
+    min-width: 100px;
+    min-height: 100px;
+
+    scroll-snap-align: start;
 }
 
+.skills-card svg {
+    width: 70px;
+    height: 70px;
+}
+
+
 .skills-card svg path {
-    /* scale: 0.5; */
     fill: white;
+}
+
+/* Hover effects for skills card */
+.skills-card div:hover svg path {
+    fill: var(--primary-color);
 }
 
 @media (min-width: 800px) {
@@ -211,9 +225,6 @@
         align-items: flex-start;
     }
 
-    .skills-card {
-        grid-template-columns: repeat(4, 1fr);
-    }
 
 }
 
@@ -222,5 +233,13 @@
     .content-cards h4,
     .content-cards p {
         text-align: center;
+    }
+}
+
+@media (max-width: 366px) {
+    .skills-card {
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
     }
 }
