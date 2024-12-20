@@ -1,0 +1,226 @@
+.resume-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6rem;
+    width: 100%;
+
+    gap: 1rem;
+
+}
+
+.why-hire-me {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    padding: 1rem;
+
+}
+
+.why-hire-me h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: white;
+}
+
+
+/* Button Group */
+.tab-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.why-hire-me button {
+    color: white;
+    font-size: 1rem;
+    width: 100%;
+    padding: 1rem 0 1rem 0;
+
+    background-color: var(--secondary-bg-color);
+    border-radius: 8px;
+
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 0.3s ease, color 0.3s ease, fill 0.3s ease, stroke 0.3s ease;
+}
+
+.tab-button.active {
+    color: var(--bg-color);
+    font-weight: 500;
+    background-color: var(--primary-color);
+}
+
+.tab-button:hover {
+    color: var(--bg-color);
+    font-weight: 500;
+    background-color: var(--primary-color);
+}
+
+/* Tab content */
+.tab-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+/* Hide what needs to be hidden */
+.tab-content.hidden {
+    display: none;
+}
+
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    /* padding: 1rem; */
+}
+
+.tab-content h3 {
+    color: white;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.tab-content>p {
+    color: white;
+    text-align: center;
+    font-weight: 300;
+}
+
+/* Cards */
+.content-cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+    gap: 1rem;
+
+    border-radius: 8px;
+
+
+    /* make it scroll */
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.content-cards h5 {
+    color: var(--primary-color);
+    /* font-weight: 400; */
+    font-size: 0.75rem;
+}
+
+.content-cards h4 {
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    word-break: break-word;
+
+    margin-bottom: 2rem;
+}
+
+.content-cards p {
+    color: white;
+    font-weight: 300;
+}
+
+.content-cards p::before {
+    content: "\2022";
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.content-cards div {
+    background-color: var(--secondary-bg-color);
+    padding: 2rem;
+    border-radius: 8px;
+    min-width: 300px;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab-content.active {
+    display: flex;
+}
+
+/* Skills card */
+.skills-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+}
+
+.skills-card div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    height: 100px;
+    background-color: var(--secondary-bg-color);
+    border-radius: 8px;
+    /* padding: 1rem; */
+}
+
+.skills-card svg path {
+    /* scale: 0.5; */
+    fill: white;
+}
+
+@media (min-width: 800px) {
+    .resume-section {
+        flex-direction: row;
+    }
+
+    .why-hire-me {
+        flex: 0.7;
+        align-items: flex-start;
+    }
+
+    .why-hire-me h1 {
+        text-align: left;
+    }
+
+    .tab-content-container {
+        flex: 1.3;
+    }
+
+    .tab-content {
+        align-items: flex-start;
+    }
+
+    .tab-content p {
+        text-align: left;
+    }
+
+    .content-cards div {
+        align-items: flex-start;
+    }
+
+    .skills-card {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .content-cards h4,
+    .content-cards p {
+        text-align: center;
+    }
+}
