@@ -1,0 +1,50 @@
+/* Modal/popover styles for resume cards */
+.modal.hidden { display: none; }
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.772);
+     backdrop-filter: blur(0.2px);
+    -webkit-backdrop-filter: blur(0.2px); /* for Safari */
+}
+.modal-content {
+    position: relative;
+    background: #e0e1e7;
+    padding: 24px;
+    max-width: 840px;
+    width: 92%;
+    max-height: 80vh;
+    overflow: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.modal-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+}
+.modal-body h5 { margin: 0 0 8px 0; color: #666; font-weight: 500; }
+.modal-body h4 { margin: 4px 0 8px 0; }
+.modal-body p { margin: 0 0 12px 0; color: #333; }
+.modal-body ul { margin-top: 8px; padding-left: 1.1rem; }
+
+/* make cards clearly clickable */
+.content-cards > div { cursor: pointer; }
+
+@media (max-width: 600px) {
+    .modal-content { padding: 16px; width: 96%; max-height: 90vh; }
+    .modal-body ul { padding-left: 1rem; }
+}

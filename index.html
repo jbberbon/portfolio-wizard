@@ -23,10 +23,7 @@
     <link rel="stylesheet" href="./css/hero-button-group.css" />
     <link rel="stylesheet" href="./css/contact-section.css" />
     <link rel="stylesheet" href="./css/resume-section.css" />
-
-
-
-
+    <link rel="stylesheet" href="./css/content-card.css" />
 </head>
 
 <body>
@@ -163,6 +160,7 @@
                 </div>
             </div>
             <div class="tab-content-container">
+                <!-- Work Experience -->
                 <div class="tab-content active" id="experience">
                     <h3>My experience</h3>
                     <p>
@@ -170,28 +168,34 @@
                         areas of Software Development.
                     </p>
                     <div class="content-cards">
-                        <div>
-                            <h5>Nov 2024 - Present</h5>
-                            <h4>Full Stack Developer Intern</h4>
-                            <p>Wizard Group</p>
+                        <div class="team-lead">
+                            <h5>Jun 2025 – Present</h5>
+                            <h4>Team Lead | Full Stack Developer (.NET)</h4>
+                            <p>Wizard Group — BGC, Taguig City</p>
                         </div>
-                        <div>
+                        <div class="wizard-intern">
+                            <h5>Nov 2024 – May 2025</h5>
+                            <h4>Full Stack Developer Intern (.NET)</h4>
+                            <p>Wizard Group — BGC, Taguig City</p>
+                        </div>
+                        <div class="altair-intern">
                             <h5>May 2024 - Oct 2024</h5>
                             <h4>Software QA Intern</h4>
                             <p>Altair Engineering</p>
                         </div>
-                        <div>
+                        <div class="pixel8-intern">
                             <h5>Aug 2023 - Oct 2023</h5>
                             <h4>Back End Developer Intern</h4>
                             <p>Pixel8 Web Solutions</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Education -->
                 <div class="tab-content hidden" id="education">
                     <h3>My education</h3>
                     <p>
-                        On track to complete my Bachelor’s Degree, gaining skills and knowledge in Information
-                        Technology to excel in Software Engineering.
+                        Beyond the technical skills, my academic journey honed me into a well-rounded professional—strengthening my leadership, communication, and collaboration abilities, which continue to play a crucial role in my growth as a software engineer.
                     </p>
                     <div class="content-cards">
                         <div>
@@ -216,6 +220,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Skills -->
                 <div class="tab-content hidden" id="skills">
                     <h3>My skills</h3>
                     <p>
@@ -316,11 +322,12 @@
                 </div>
                 <div class="tab-content hidden" id="about-me">
                     <h3>About me</h3>
+                    <p> While I’m passionate about coding, I also enjoy the things that keep life fun and balanced — cats, animated shows, and recently, traveling. </p>
                 </div>
             </div>
         </section>
 
-
+        <!-- Contact Section -->
         <section class="contact-section" id="contact">
             <div class="contact-form">
                 <h2>Let's work together</h2>
@@ -355,7 +362,7 @@
                     </div>
                     <div>
                         <h3>Phone</h3>
-                        <h4>(+63) 905 420 9549</h4>
+                        <h4>(+63) 939 700 9299</h4>
                     </div>
                 </div>
                 <div class="email">
@@ -412,12 +419,22 @@
             <h1></h1>
         </section>
     </main>
+    
+    <!-- Resume modal (shown when clicking any card in .content-cards) -->
+    <div id="resume-modal" class="modal hidden" aria-hidden="true">
+        <div class="modal-backdrop" data-close></div>
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" aria-label="Close modal">×</button>
+            <div class="modal-body" id="modal-body">
+                <!-- Filled dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./constants/experience-details.js"></script>
     <script type="module" src="./scripts/script.js"></script>
     <script type="module" src="./scripts/contact-form-script.js"></script>
     <script type="module" src="./scripts/resume-tab-script.js"></script>
-
-
-    </script>
+    <script type="module" src="./scripts/modal.js"></script>
 </body>
-
 </html>
